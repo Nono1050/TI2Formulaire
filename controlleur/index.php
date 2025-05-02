@@ -23,6 +23,8 @@ try{
 $articles = select($connexion);
 
 
+
+
 if(isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['email']) && isset($_POST['telephone']) && isset($_POST['message']))
 {
 $insert=insert($connexion, $_POST['nom'], $_POST['prenom'], $_POST['email'], $_POST['telephone'], $_POST['message']);
