@@ -1,19 +1,28 @@
+body{
+    background-color: darkolivegreen;
+}
+
+
 .container,
 .containerTable {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 form div {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 form {
+    border: 4px solid black;
+    border-radius: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(5,auto); /* <-- ici tu dis : 2 colonnes */
+    grid-template-rows: repeat(4,auto); /* <-- ici tu dis : 2 colonnes */
     gap: 10px;
     grid-template-areas: 
         "name message"
@@ -24,12 +33,19 @@ form {
     /* optionnel pour aérer un peu */
 }
 
-#name {
+#prenom {
     grid-area: name;
+}
+#name {
+    grid-area: prenom;
 }
 #email {
     grid-area: email;
 }
+#telephone {
+    grid-area: tel;
+}
+
 #password {
     grid-area: password;
 }
@@ -37,17 +53,13 @@ form {
     grid-area: message;
     justify-self: start; /* Aligne le message à gauche dans sa cellule */
 }
-#prenom {
-    grid-area: prenom;
-}
-#telephone {
-    grid-area: tel;
-}
 
 
-@media screen and (width< 600px) {
+
+/* Une seule colonne sur les petits écrans */
+@media screen and (width< 480px) {
     form {
-        grid-template-columns: auto; /* Une seule colonne sur les petits écrans */
+        grid-template-columns: auto; 
         grid-template-areas: 
             "name"
             "prenom"
@@ -56,21 +68,27 @@ form {
             "password"
             "message";
     }
+    body{
+        background-color: aqua;
+    }
    
 }
-
-@media screen and (600px< width < 900px) {
+/* Deux colonnes sur les écrans moyens */
+@media screen and (480px< width < 960px) {
     form {
-        grid-template-columns: auto auto; /* Deux colonnes sur les écrans moyens */
+        grid-template-columns: auto auto; 
         grid-template-areas: 
             "name prenom"
             "tel email"
   
-            "message message";
+            "message ";
     }
     textarea {
         width: 350px;
        
       }
+      body{
+        background-color: chocolate;
+    }
     
 }

@@ -10,20 +10,21 @@
 <body>
 
 <div class="container">
-<h1>Formulaire de contact</h1>
+<h1>TI2 | Livre d'or</h1>
+<img src="../img/sign-up-amico.png" alt="">
 
 <form action="" method="post">
+
+<div id="prenom">
+        <label for="prenomID">Prénom</label>
+        <input type="text" id="prenomID" name="prénom" placeholder="Entrez votre prénom" required>
+        <span class="error-message" id="PrenomError"></span>
+    </div>
 
     <div id="name">
         <label for="NomID">Nom</label>
         <input type="text" id="NomID" name="nom" placeholder="Entrez votre nom" required>
         <span class="error-message" id="NomError"></span>
-    </div>
-
-    <div id="prenom">
-        <label for="prenomID">Prénom</label>
-        <input type="text" id="prenomID" name="prenom" placeholder="Entrez votre prénom" required>
-        <span class="error-message" id="PrenomError"></span>
     </div>
 
     <div id="email">
